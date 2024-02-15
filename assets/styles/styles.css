@@ -12,13 +12,36 @@ h1, h2, h3, h4, h5, h6, p {
     color: #ffffff;
 }
 a {
+    color: #51D9FE;
     transition: all 0.3s ease-in-out;
+}
+em {
+    font-weight: 300;
+    color: #D52265;
 }
 a:hover { 
     text-decoration: none;
     color: #D52265;
 }
-
+.mdi {
+    font-size: 18px;;
+    color: #FFFFFF;
+}
+.mdi-large {
+    font-size:2rem;
+    margin: 0 20px 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+.icons .icon-bg, .icons .icon-no-bg {
+    margin: 0 20px 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+.mdi-large:hover {
+    color: #FEC651;
+}
+.icons .icon-bg:hover {
+    background-color: #262626;
+}
 /* colors */
 .border {
     border: .25px solid #c5c5c51e;
@@ -67,6 +90,9 @@ a:hover {
 }
 
 /* table */
+.remove-border {
+    border-top: none !important;
+}
 .uk-table td {
     width: 25%;
 }
@@ -99,12 +125,29 @@ p {
     color: #D52265;
 }
 
-/* button styles*/
-.default-button {
-    background-color: #262626;
+/* element styles*/
+.system-message {
+    background-color: #D52265;
     padding: 0 16px;
     width: 318px;
     height: 60px;
+    margin: 20px 0 0 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+.tooltip {
+    background-color: #333333;
+    margin: 20px 0 0 0;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.default-element {
+    background-color: #262626;
+    padding: 0 16px;
+    width: 318px;
     margin: 20px 0 0 0;
     border-radius: 5px;
     justify-content: space-between;
@@ -112,6 +155,12 @@ p {
     display: flex;
     flex: 0 0 auto;
     transition: all 0.3s ease-in-out;
+}
+.container {
+    min-height: 60px;
+}
+.button {
+    height: 60px;
 }
 .icon-bg {
     background-color: #333333;
@@ -123,51 +172,118 @@ p {
     justify-content: center;
     transition: all 0.3s ease-in-out;
 }
-.default-button:hover {
+.match {
+    line-height: 2rem;
+}
+.icon-no-bg {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+.button:hover {
     background-color: #333333;
+    cursor: pointer;
 }
-.default-button:hover .icon-bg {
+.button:hover .icon-bg {
     background-color: #262626;
+    cursor: pointer;
 }
-.small-button {
-    background-color: #262626;
-    padding: 0 20px;
-    width: 110px;
-    height: 60px;
-    margin: 20px 0 0 0;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    transition: all 0.3s ease-in-out;
-    }
-    
-.small-button:hover {
-    background-color: #333333; 
-}
-.small-primary-button {
+.button.small:hover {
     background-color: #D52265;
+}
+.small {
     padding: 0 20px;
     width: 110px;
-    height: 60px;
-    margin: 20px 0 0 0;
-    border-radius: 5px;
     justify-content: center;
-    align-items: center;
-    display: flex;
-    transition: all 0.3s ease-in-out;
-    }
-    
-.small-primary-button:hover {
-    background-color: #d03375; 
+}
+.primary {
+    background-color: #D52265;
 }
 
+
+
+/* Alerts */
+.uk-modal-dialog {
+    background: #262626;
+    width: 350px;
+    padding: 16px;
+    text-align: center;
+}
+.confirmation {
+    background-color: #262626;
+    padding: 16px;
+    width: 318px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    color: #FFFFFF;
+    text-align: center;
+}
+.alert {
+    background-color: #D52265;
+    padding: 7px 16px;
+    width: 600px;
+    height: 60px;
+    text-align: left;
+    justify-content: space-between;
+    margin: 20px auto 0;
+}
+.flex-100 {
+    flex: 0 0 auto;
+}
+.confirmation:hover {
+    color: #FFFFFF;
+}
+
+.confirmation-button {
+    background-color: #333333;
+    padding: 0 16px;
+    width: 68px;
+    height: 40px;
+    margin: 20px 10px 0;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+.confirmation-button:hover {
+    background-color: #D52265;
+    cursor: pointer;
+}
+.alert-button {
+    background-color: #262626;
+    padding: 0 5px;
+    width: 50px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+.alert-button:hover {
+    background-color: #333333;
+    cursor: pointer;
+}
 
 /* CSS colors */
 .light-blue {
     font-weight: 300;
     color: rgb(157, 202, 239);
     padding-left: 30px;
+}
+.token.property, .token.attr-name {
+    font-weight: 300;
+    color: rgb(157, 202, 239);
 }
 .css-comment {
     font-weight: 300;
@@ -178,11 +294,55 @@ p {
     font-weight: 300;
     color:rgb(165, 217, 165);
 }
-.orange {
+.orange, .token.attr-value {
     font-weight: 300;
     color:rgb(222, 143, 98)
 }
-.gold {
+.gold, .token.selector  {
     font-weight: 300;
     color:rgb(233, 214, 130)
+}
+.token.tag {
+    font-weight: 300;
+    color: rgb(109, 174, 221);
+}
+
+/* Prsim Styling */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+pre[class*="language-"] {
+  position: relative;
+  overflow: auto;
+
+  /* make space  */
+  margin: 5px 0 20px;
+  padding: 10px;
+  /*border-radius: 10px;*/
+}
+
+pre[class*="language-"] button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 0.9rem;
+  padding: 0.15rem;
+  background-color: transparent;
+
+  border: none;
+  border-radius: 0;
+  text-shadow: none;
+}
+pre[class*="language-"] button .icon-bg {
+    background-color: #262626; 
+}
+pre[class*="language-"] button:hover .icon-bg {
+  cursor: pointer;
+  background-color: #333333;
+}
+pre {
+    border: none;
 }

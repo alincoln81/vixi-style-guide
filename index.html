@@ -11,6 +11,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+        
+        <!-- Prsim -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
+
         <script src="https://kit.fontawesome.com/9aab0c4940.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="./assets/uikit/css/uikit.min.css" />
@@ -35,6 +41,28 @@
         </header>
 
         <main>
+
+            
+            <pre><code class="language-html">
+                &lt;div class="box drop3"&gt;&lt;/div&gt;
+            </code></pre>
+            <pre><code class="language-javascript">
+                console.log("finished");
+                await navigator.clipboard.writeText(text);
+            </code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <!-- COLORS -->
             <section class="colors uk-margin-large-top">
@@ -126,202 +154,413 @@
                 </div> 
             </section>
 
-            <!-- FONTS -->
+            <!-- FONTS & ICONS -->
             <section class="fonts uk-margin-large-top"> 
                 <div class="uk-container uk-padding-small uk-margin-auto">
-                    <div class="bg-med-grey uk-padding">
+                    <div class="">
                         <h1 class="uk-text-left">Fonts</h1>
+                        <ul>
+                            <li>Inter is the only font that should be used for all of Vixi Suite and it's related products and marketing materials.<br>
+                                This is a Google Font and it can be downloaded <a href="https://fonts.google.com/specimen/Inter" target="_blank">here</a></li>
+                        </ul>
+                        
+                        <table class="uk-table uk-table-responsive uk-table-divider">
+                            <tr>
+                                <td>
+                                    <p class="uk-margin-remove">Default Font Style (html & body)</p>
 
-                        <table class="uk-table uk-table-middle uk-table-responsive uk-table-divider">
-                            <tr>
-                                <td>
-                                    <p>Default Font Style (html & body)</p>
-                                    <p>
-                                        <span class="light-blue">font-family:</span> <span class="orange">'Inter', sans-serif</span>; <br>
-                                        <span class="light-blue">font-weight:</span> <span class="light-green">500</span>; <br>
-                                        <span class="light-blue">font-size:</span> <span class="light-green">16px</span>; <br>
-                                        <span class="light-blue">letter-spacing:</span> <span class="light-green">1.25px</span>; <br>
-                                        <span class="light-blue">line-height:</span> <span class="light-green">1.5</span>; <br>
-                                        <span class="light-blue">color:</span> <span class="orange">#FFFFFF</span>;
-                                    </p>
+<pre><code class="language-css"> html, body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+</code></pre>
+                                    <p class="uk-margin-remove text-grey-75">Top Nav Right, Side Nav, & Dropdown</p>
+<pre><code class="language-css"> .nav, .dropdown-nav {
+    color: #9A9A9A; 
+    padding: 0.5rem;
+}
+</code></pre>
                                 </td>
                                 <td>
-                                    [INSERT EXAMPLES HERE]
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 
+                                    <h2 class="uk-margin-remove warning">Warnings</h2>
+<pre><code class="language-css"> .warning {
+    font-size: 1.25rem; /* 20px */
+    color: #D52265;
+}
+</code></pre>
                                     <h2 class="uk-margin-remove">Headings & Titles</h2>
-                                    <p>
-                                        <span class="light-blue">font-size:</span> <span class="light-green">1.25rem</span>;<span class="css-comment">/* 20px */</span>
-                                    </p>
-                                </td>
-                                <td>
-                                    [INSERT EXAMPLES HERE]
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="subheading">Subheadings</p>
-                                    <p>
-                                        <span class="light-blue">font-size:</span> <span class="light-green">0.75rem</span>;<span class="css-comment">/* 12px */</span>
-                                    </p>
-                                </td>
-                                <td>
-                                    [INSERT EXAMPLES HERE]
-                                </td>
-                                
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="text-grey-75">Top Nav Right, Side Nav, & Dropdown</p>
-                                    <p>
-                                        <span class="light-blue">color:</span> <span class="orange">#9A9A9A</span>; <br>
-                                        <span class="light-blue">padding:</span> <span class="light-green">0.5rem</span>;
-                                    </p>
-                                </td>
-                                <td>
-                                    [INSERT EXAMPLES HERE]
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h2 class="warning">Warnings</p>
-                                    <p>
-                                        <span class="light-blue">font-size:</span> <span class="light-green">1.25rem</span>;<span class="css-comment">/* 20px */</span> <br>
-                                        <span class="light-blue">color:</span> <span class="orange">#D52265</span>;
-                                    </p>
-                                </td>
-                                <td>
-                                    [INSERT EXAMPLES HERE]
+<pre><code class="language-css"> .heading, .title {
+    font-size: 1.25rem; /* 20px */
+}
+</code></pre>
+                                    <p class="uk-margin-remove subheading">Subheadings</p>
+<pre><code class="language-css"> .subheading {
+    font-size: 0.75rem; /* 12px */
+}
+</code></pre>
+
                                 </td>
                             </tr>
                         </table>
+                    </div>
+                    <div class="uk-margin-large-top">
+                        <h1 class="uk-text-left">Icons</h1>
+                        <ul>
+                            <li>For consistency, use only Icons from 
+                                <a href="https://pictogrammers.com/library/mdi/" target="_blank">Material Design Icons (MDI)</a></li>
+                            <li>Aside from navigation related icons, all icons should always have a Grey Background that is 40px by 40px</li>
+                        </ul>
+                        <table class="icons-table uk-table uk-table-responsive uk-table-divider uk-margin-remove-bottom uk-padding-remove-bottom">
+                            <tr>
+                                <td>
+                                    <div class="uk-padding uk-padding-remove-left uk-padding-remove-vertical">
+
+<pre><code class="language-css"> .icon-bg {
+    background-color: #333333;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+</code></pre>
+<pre><code class="language-css"> .mdi {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+</code></pre>
+<pre><code class="language-css"> .icon-bg:hover {
+    background-color: #262626;
+}
+</code></pre>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icons">
+                                        <span uk-tooltip="Edit Users" class="icon-bg"><span class="mdi mdi-account-group"></span></span> mdi-account-group<br>
+                                        <span uk-tooltip="Edit Products" class="icon-bg"><span class="mdi mdi-package-variant-closed"></span></span> mdi-package-variant-closed<br>
+                                        <span uk-tooltip="Edit Orgs" class="icon-bg"><span class="mdi mdi-hexagon-multiple"></span></span> mdi-hexagon-multiple<br>
+                                        <span uk-tooltip="User Profile" class="icon-bg"><span class="mdi mdi-account"></span></span> mdi-account<br>
+                                        <span uk-tooltip="Edit" class="icon-bg"><span class="mdi mdi-pencil"></span></span> mdi-pencil<br>
+                                        <span uk-tooltip="Copy" class="icon-bg"><span class="mdi mdi-content-copy"></span></span> mdi-content-copy<br>
+                                        <span uk-tooltip="Download" class="icon-bg"><span class="mdi mdi-download"></span></span> mdi-download<br>
+                                        <span uk-tooltip="Download" class="icon-bg"><span class="mdi mdi-upload"></span></span> mdi-upload<br>
+                                        <span uk-tooltip="Moderate" class="icon-bg"><span class="mdi mdi-dots-grid"></span></span> mdi-dots-grid<br>
+                                        <span uk-tooltip="Connect" class="icon-bg"><span class="mdi mdi-connection"></span></span> mdi-connection<br>
+                                        <span uk-tooltip="Add" class="icon-bg"><span class="mdi mdi-plus"></span></span> mdi-plus
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="icons">
+                                        <span uk-tooltip="Save" class="icon-bg"><span class="mdi mdi-content-save"></span></span> mdi-content-save<br>
+                                        <span uk-tooltip="Delete" class="icon-bg"><span class="mdi mdi-trash-can"></span></span> mdi-trash-can<br>
+                                        <span uk-tooltip="Stats" class="icon-bg"><span class="mdi mdi-chart-timeline-variant"></span></span> mdi-chart-timeline-variant<br>
+                                        <span uk-tooltip="Lock" class="icon-bg"><span class="mdi mdi-lock"></span></span> mdi-lock<br>
+                                        <span uk-tooltip="Unlock" class="icon-bg"><span class="mdi mdi-lock-open-variant"></span></span> mdi-lock-open-variant<br>
+                                        <span uk-tooltip="Signal Strength" class="icon-bg"><span class="mdi mdi-wifi-alert"></span></span> mdi-wifi-alert<br>
+                                        <span uk-tooltip="Pin" class="icon-bg"><span class="mdi mdi-pin"></span></span> mdi-pin<br>
+                                        <span uk-tooltip="Kick" class="icon-bg"><span class="mdi mdi-karate"></span></span> mdi-karate<br>
+                                        <span uk-tooltip="Star" class="icon-bg"><span class="mdi mdi-star"></span></span> mdi-star<br>
+                                        <span uk-tooltip="refresh" class="icon-bg"><span class="mdi mdi-refresh"></span></span> mdi-refresh<br>
+                                        <span uk-tooltip="Expand" class="icon-bg"><span class="mdi mdi-arrow-expand-all"></span></span> mdi-arrow-expand-all
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <h2>Other Icons</h2>
+                                </td>
+                            </tr>
+                            <tr class="remove-border">
+                                <td class="uk-padding-remove-bottom">
+                                    <div class="icons">
+                                        <span uk-tooltip="Search" class="mdi-large mdi mdi-magnify"></span>mdi-magnify<br>
+                                        <span uk-tooltip="Eye" class="mdi-large mdi mdi-eye"></span>mdi-eye<br>
+                                        <span uk-tooltip="Menu" class="mdi-large mdi mdi-menu"></span>mdi-menu<br>
+                                    </div>
+                                </td>
+                                <td class="uk-padding-remove-bottom">
+                                    <div class="icons">
+                                        <span uk-tooltip="Close" class="mdi-large mdi mdi-close"></span> mdi-close<br>
+                                        <span uk-tooltip="Dropdown" class="mdi-large mdi mdi-chevron-down"></span> mdi-chevron-down<br>
+                                    </div>
+                                </td>
+                                <td class="uk-padding-remove-bottom">
+                                    <div class="icons">
+                                        <span uk-tooltip="Toggle Off" class="mdi-large mdi mdi-toggle-switch-off"></span> mdi-toggle-switch-off<br>
+                                        <span uk-tooltip="Toggle On" class="mdi-large mdi mdi-toggle-switch"></span> mdi-toggle-switch<br>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        
                     </div>
                 </div>
             </section>
 
             <!-- ELEMENTS -->
-            <section class="layout uk-margin-large-top"> 
+            <section class="elements uk-margin-large-top"> 
                 <div class="uk-container uk-padding-small uk-margin-auto">
                     <h1 class="uk-text-left">Elements</h1>
+                    <ul>
+                        <li>No elements should <em><strong>EVER</strong></em> have drop shadows</li>
+                    </ul>
+                    <table class="uk-table uk-table-responsive uk-table-divider">
+                        <tr>
+                            <td colspan="3">
+                                <h2 class="uk-margin-remove-bottom">Default Elements</h2>
+                            </td>
+                        </tr>
+                        <tr class="remove-border">
+                            <td>
 
-                    <div class="uk-grid-collapse" uk-grid>
-                        <div class="uk-width-2-3@m">
-                            <div class="uk-grid-collapse uk-child-width-1-2@m" uk-grid>
-                                <div>
-                                    <h2 class="uk-margin-remove-bottom">Default Button (div)</h2>
-                                    <p class="uk-margin-remove">
-                                        <span class="gold">.default-button {</span> <br>
-                                            <span class="light-blue">background-color:</span> <span class="orange">#262626</span>; <br>
-                                            <span class="light-blue">padding:</span> <span class="light-green">0 16px</span>; <br>
-                                            <span class="light-blue">width:</span> <span class="light-green">318px</span>; <br>
-                                            <span class="light-blue">height:</span> <span class="light-green">60px</span>; <br>
-                                            <span class="light-blue">margin:</span> <span class="light-green">20px 0 0 0</span>; <br>
-                                            <span class="light-blue">border-radius:</span> <span class="light-green">5px</span>; <br>
-                                            <span class="light-blue">justify-content:</span> <span class="orange">space-between</span>; <br>
-                                            <span class="light-blue">align-items:</span> <span class="orange">center</span>; <br>
-                                            <span class="light-blue">display:</span> <span class="orange">flex</span>; <br>
-                                            <span class="light-blue">flex:</span> <span class="light-green">0 0</span> <span class="orange">auto</span>; <br>
-                                            <span class="light-blue">transition:</span> <span class="orange">all</span> <span class="light-green">0.3s</span> <span class="orange">ease-in-out</span>; <br>
-                                        <span class="gold">}</span>
-                                    </p>
-                                    <p class="uk-margin-remove">
-                                        <span class="gold">.default-button:hover {</span> <br>
-                                            <span class="light-blue">background-color:</span> <span class="orange">#333333</span>; <br>
-                                        <span class="gold">}</span>
-                                    </p>
+<pre><code class="language-css"> .default-element {
+    background-color: #262626;
+    padding: 0 16px;
+    /* height increases to fit */
+    min-height: 60px;
+    width: 318px;
+    margin: 20px 0 0 0;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+</code></pre>
+<pre><code class="language-css"> .default-element.primary {
+    background-color: #D52265;
+}
+</code></pre>
+<pre><code class="language-css"> .default-element.small {
+    padding: 0 20px;
+    width: 110px;
+    justify-content: center;
+    /* Incase Text Spans 2 lines */
+    text-align: center; 
+}
+</code></pre>
+
+                            </td>
+                            <td>
+<pre><code class="language-css"> .button {
+    height: 60px;
+}
+</code></pre>
+<pre><code class="language-css"> .button:hover {
+    background-color: #333333;
+}
+</code></pre>
+<pre><code class="language-css"> .button:hover .icon-bg {
+    background-color: #262626;
+}
+</code></pre>
+<pre><code class="language-css"> .button.small:hover {
+    background-color: #D52265;
+}
+</code></pre>
+                            </td>
+                            <td>
+                                <div class="default-element container">Default Element</div>
+                                <div class="default-element button">Default Button w/Icon<span class="icon-bg"><span class="mdi mdi-pencil"></span></span></div>
+                                <div class="default-element container primary">Primary Element</div>
+                                <div class="default-element small button uk-text-center">Small Button</div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="3">
+                                <h2 class="uk-margin-remove-bottom">Confirmation Dialogs & Alerts</h2>
+                                <ul>
+                                    <li>Alert & Confirmation Dialogs should <em><strong>NOT</strong></em> have rounded edges.
+                                        <ul>
+                                            <li>However, the buttons contained in them should still have a 5px border radius</li>
+                                        </ul> 
+                                    </li>
+                                    <li>Confirmation dialogs should apear as a model in the center of the page with a semi-opaque background covering the whole page</li>
+                                    <li>Alert dialogs should appear 20px from the top of the page and be horizontially centered.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="remove-border">
+                            <td colspan="3">
+                                <a class="uk-margin-auto confirmation" href="#modal-center" uk-toggle>
+                                    <div>
+                                        This is a Confirmation Dialog. Click the box to see it in action.
+                                        <div>
+                                            <div class="confirmation-button">Cancel</div>
+                                            <div class="confirmation-button">Confirm</div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </a>
+                                <div id="modal-center" class="uk-flex-top" uk-modal>
+                                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                                        This is a sample Confirmation Dialog. Press ESC or click on the baground to close it.
+                                        <div>
+                                            <div class="confirmation-button">Cancel</div>
+                                            <div class="confirmation-button">Confirm</div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </td>
+                        </tr>
+                        <tr class="remove-border">
+                            <td>                      
+<pre><code class="language-css">.confirmation {
+    background-color: #262626;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 16px;
+    width: 318px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+</code></pre>
+                            </td>
+                            <td>
+<pre><code class="language-css">.confirmation-button {
+    background-color: #333333;
+    padding: 0 16px;
+    width: 68px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 0 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+</code></pre>
+                            </td>
+                            <td>
+<pre><code class="language-css">.confirmation-button:hover  {
+    background-color: #D52265;
+    cursor: pointer;
+}
+</code></pre>
+                            </td>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="confirmation alert">
+                                        <span>This is an Alert Dialog</span>
+                                        <span>
+                                            <span class="alert-button">No</span>
+                                            <span class="alert-button">Yes</span>
+                                        </span>
+                                    </div>
 
-                                <div>
-                                    <h2 class="uk-margin-remove-bottom">w/Icon (span)</h2>
-                                    <p class="uk-margin-remove">
-                                        <span class="gold">.icon-bg {</span> <br>
-                                            <span class="light-blue">background-color:</span> <span class="orange">#333333</span>; <br>
-                                            <span class="light-blue">width:</span> <span class="light-green">40px</span>; <br>
-                                            <span class="light-blue">height:</span> <span class="light-green">40px</span>; <br>
-                                            <span class="light-blue">border-radius:</span> <span class="light-green">5px</span>; <br>
-                                            <span class="light-blue">justify-content:</span> <span class="orange">center</span>; <br>
-                                            <span class="light-blue">align-items:</span> <span class="orange">center</span>; <br>
-                                            <span class="light-blue">display:</span> <span class="orange">flex</span>; <br>
-                                            <span class="light-blue">transition:</span> <span class="orange">all</span> <span class="light-green">0.3s</span> <span class="orange">ease-in-out</span>; <br>
-                                        <span class="gold">}</span>
-                                    </p>
-                                    <p class="uk-margin-remove">
-                                        <span class="gold">.default-button:hover .icon-bg {</span> <br>
-                                            <span class="light-blue">background-color:</span> <span class="orange">#262626</span>; <br>
-                                        <span class="gold">}</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="uk-width-1-3@m">
-                            <div class="default-button">Default Button</div>
-                            <div class="default-button">
-                                Default Button w/Icon
-                                <span class="icon-bg"><i class="fa-solid fa-pen"></i></span>
-                            </div>
-                        </div>
-                    </div>
+                                </td>
+                            </tr>
+                            <tr class="remove-border">
+                                <td>
 
-                    <div class="uk-grid-collapse uk-margin-large-top" uk-grid>
-                        <div class="uk-width-2-3@m">
-                            <div class="uk-grid-collapse uk-child-width-1-2@m" uk-grid>
-                                <div>
-                                    <h2 class="uk-margin-remove-bottom">Small Button (div)</h2>
-                                    <p class="uk-margin-remove">
-                                        <span class="gold">.small-button {</span> <br>
-                                            <span class="light-blue">background-color:</span> <span class="orange">#262626</span>; <br>
-                                            <span class="light-blue">padding:</span> <span class="light-green">0 20px</span>; <br>
-                                            <span class="light-blue">width:</span> <span class="light-green">110px</span>; <br>
-                                            <span class="light-blue">height:</span> <span class="light-green">60px</span>; <br>
-                                            <span class="light-blue">margin:</span> <span class="light-green">20px 0 0 0</span>; <br>
-                                            <span class="light-blue">border-radius:</span> <span class="light-green">5px</span>; <br>
-                                            <span class="light-blue">justify-content:</span> <span class="orange">center</span>; <br>
-                                            <span class="light-blue">align-items:</span> <span class="orange">center</span>; <br>
-                                            <span class="light-blue">display:</span> <span class="orange">flex</span>; <br>
-                                            <span class="light-blue">transition:</span> <span class="orange">all</span> <span class="light-green">0.3s</span> <span class="orange">ease-in-out</span>; <br>
-                                        <span class="gold">}</span>
-                                    </p>
-                                    <p class="uk-margin-remove">
-                                        <span class="gold">.small-button:hover {</span> <br>
-                                            <span class="light-blue">background-color:</span> <span class="orange">#333333</span>; <br>
-                                        <span class="gold">}</span>
-                                    </p>
-                                </div>
+<pre><code class="language-css">.alert  {
+    background-color: #D52265;
+    text-align: left;
+    width: 600px;
+    height: 60px;
+    margin: 20px auto 0;
+    padding: 7px 16px;
+    color: #FFFFFF;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+</code></pre>  
+                                </td>
+                                <td>
+<pre><code class="language-css">.alert-button {
+    background-color: #262626;
+    padding: 0 5px;
+    width: 50px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 0 0 auto;
+    transition: all 0.3s ease-in-out; 
+}
+</code></pre>
+                                </td>
+                                <td>
+<pre><code class="language-css">.alert-button:hover {
+    background-color: #333333;
+    cursor: pointer;
+}
+</code></pre> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <h2 class="uk-margin-remove-bottom">Tooltips & System Messages</h2>
+                                    <ul>
+                                        <li>Tooltips & System Messages should <em><strong>NOT</strong></em> have rounded edges.
+                                        </li>
+                                        <li>System Messages should appear 20px from the bottom of the page and be horizontially centered.</li>
+                                        <li>Tooltips should appear 5px to above the element on hover, and be cetered, see the tooltips on the Icons for an example.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="remove-border">
+                                <td>
+                                    
+<pre><code class="language-css">.system-message {
+    background-color: #D52265;
+    width: 318px;
+    height: 60;
+    margin: 20px 0 0 0;
+    padding: 7px 16px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+</code></pre> 
+                                
+                                </td>
+                                <td>
+<pre><code class="language-css">.tooltip {
+    background-color: #333333;
+padding: 5px 10p;
+margin: 20px 0 0 0;
+transition: all 0.3s ease-in-out;
+}
+</code></pre> 
+                                </td>
+                                <td>
+                                    <div class="system-message uk-text-center">
+                                        This is a System Message
+                                    </div>
+                                    <div class="uk-margin-top">
+                                        <span class="tooltip">
+                                            This is a Tooltip
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
 
-                                <div>
-                                    <h2 class="uk-margin-remove-bottom">Small Primary Button (div)</h2>
-                                    <p class="uk-margin-remove">
-                                        <span class="gold">.small-primary-button {</span> <br>
-                                            <span class="light-blue">background-color:</span> <span class="orange">#D52265</span>; <br>
-                                            <span class="light-blue">padding:</span> <span class="light-green">0 20px</span>; <br>
-                                            <span class="light-blue">width:</span> <span class="light-green">110px</span>; <br>
-                                            <span class="light-blue">height:</span> <span class="light-green">60px</span>; <br>
-                                            <span class="light-blue">margin:</span> <span class="light-green">20px 0 0 0</span>; <br>
-                                            <span class="light-blue">border-radius:</span> <span class="light-green">5px</span>; <br>
-                                            <span class="light-blue">justify-content:</span> <span class="orange">center</span>; <br>
-                                            <span class="light-blue">align-items:</span> <span class="orange">center</span>; <br>
-                                            <span class="light-blue">display:</span> <span class="orange">flex</span>; <br>
-                                            <span class="light-blue">transition:</span> <span class="orange">all</span> <span class="light-green">0.3s</span> <span class="orange">ease-in-out</span>; <br>
-                                        <span class="gold">}</span>
-                                    </p>
-                                    <p class="uk-margin-remove">
-                                        <span class="gold">.small-primary-button:hover {</span> <br>
-                                            <span class="css-comment">/* 20% Lighten */</span> <br>
-                                            <span class="light-blue">background-color:</span> <span class="orange">#d03375</span>; <br>
-                                        <span class="gold">}</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="uk-width-1-3@m">
-                            <div class="small-button">Small Button</div>
-                            <div class="small-primary-button">Small Primary</div>
-                        </div>
-                    </div>
+
+
+                    </table>
                 </div>
             </section>
 
