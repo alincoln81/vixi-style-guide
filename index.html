@@ -134,13 +134,14 @@
             <!-- FONTS & ICONS -->
             <section class="fonts uk-margin-large-top"> 
                 <div class="uk-container uk-padding-small uk-margin-auto">
+                    
                     <div class="">
                         <h1 class="uk-text-left">Fonts</h1>
                         <ul>
                             <li>Inter is the only font that should be used for all of Vixi Suite and it's related products and marketing materials.<br>
                                 This is a Google Font and it can be downloaded <a href="https://fonts.google.com/specimen/Inter" target="_blank">here</a></li>
                         </ul>
-                        
+                        <!-- FONTS -->
                         <table class="uk-table uk-table-responsive uk-table-divider">
                             <tr>
                                 <td>
@@ -184,6 +185,7 @@
                             </tr>
                         </table>
                     </div>
+                    <hr>
                     <div class="uk-margin-large-top">
                         <h1 class="uk-text-left">Icons</h1>
                         <ul>
@@ -191,6 +193,7 @@
                                 <a href="https://pictogrammers.com/library/mdi/" target="_blank">Material Design Icons (MDI)</a></li>
                             <li>Aside from navigation related icons, all icons should always have a Grey Background that is 40px by 40px</li>
                         </ul>
+                        <!-- ICONS -->
                         <table class="icons-table uk-table uk-table-responsive uk-table-divider uk-margin-remove-bottom uk-padding-remove-bottom">
                             <tr>
                                 <td>
@@ -249,6 +252,10 @@
                                     </div>
                                 </td>
                             </tr>
+                        </table>
+                        <hr class="light">
+                        <!-- OTHER ICONS -->
+                        <table class="icons-table uk-table uk-table-responsive uk-table-divider uk-margin-remove-bottom uk-padding-remove-bottom">
                             <tr>
                                 <td colspan="3">
                                     <h2>Other Icons</h2>
@@ -276,21 +283,21 @@
                                 </td>
                             </tr>
                         </table>
-                        
                     </div>
                 </div>
             </section>
-
             <!-- ELEMENTS -->
             <section class="elements uk-margin-large-top"> 
                 <div class="uk-container uk-padding-small uk-margin-auto">
+                    <hr>
                     <h1 class="uk-text-left">Elements</h1>
                     <ul>
                         <li>No elements should <em><strong>EVER</strong></em> have drop shadows</li>
                     </ul>
+                    <!-- CONTAINERS & BUTTONS -->
                     <table class="uk-table uk-table-responsive uk-table-divider">
                         <tr>
-                            <td colspan="3">
+                            <td colspan="2">
                                 <h2 class="uk-margin-remove-bottom">Default Elements</h2>
                             </td>
                         </tr>
@@ -325,8 +332,6 @@
 }
 </code></pre>
 
-                            </td>
-                            <td>
 <pre><code class="language-css"> .button {
     height: 60px;
 }
@@ -351,10 +356,12 @@
                                 <div class="default-element small button uk-text-center">Small Button</div>
                             </td>
                         </tr>
-
-
+                    </table>
+                    <!-- CONFIRMATION DIALOGS -->
+                    <hr class="light">
+                    <table class="uk-table uk-table-responsive uk-table-divider">
                         <tr>
-                            <td colspan="3">
+                            <td colspan="2">
                                 <h2 class="uk-margin-remove-bottom">Confirmation Dialogs & Alerts</h2>
                                 <ul>
                                     <li>Alert & Confirmation Dialogs should <em><strong>NOT</strong></em> have rounded edges.
@@ -368,7 +375,39 @@
                             </td>
                         </tr>
                         <tr class="remove-border">
-                            <td colspan="3">
+                            <td>                      
+<pre><code class="language-css">.confirmation {
+    background-color: #262626;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 16px;
+    width: 318px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+</code></pre>
+<pre><code class="language-css">.confirmation-button {
+    background-color: #333333;
+    padding: 0 16px;
+    width: 68px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 0 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+</code></pre>
+<pre><code class="language-css">.confirmation-button:hover  {
+    background-color: #D52265;
+    cursor: pointer;
+}
+</code></pre>
+                            </td>
+                            <td>
                                 <a class="uk-margin-auto confirmation" href="#modal-center" uk-toggle>
                                     <div>
                                         This is a Confirmation Dialog. Click the box to see it in action.
@@ -391,59 +430,13 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="remove-border">
-                            <td>                      
-<pre><code class="language-css">.confirmation {
-    background-color: #262626;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 16px;
-    width: 318px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    transition: all 0.3s ease-in-out;
-}
-</code></pre>
-                            </td>
+                    </table>
+                    <hr class="light">
+                    <!-- ALERTS -->
+                    <table class="uk-table uk-table-responsive uk-table-divider">
+                        
+                        <tr>
                             <td>
-<pre><code class="language-css">.confirmation-button {
-    background-color: #333333;
-    padding: 0 16px;
-    width: 68px;
-    height: 40px;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
-    border-radius: 0 0 auto;
-    transition: all 0.3s ease-in-out;
-}
-</code></pre>
-                            </td>
-                            <td>
-<pre><code class="language-css">.confirmation-button:hover  {
-    background-color: #D52265;
-    cursor: pointer;
-}
-</code></pre>
-                            </td>
-                            <tr>
-                                <td colspan="3">
-                                    <div class="confirmation alert">
-                                        <span>This is an Alert Dialog</span>
-                                        <span>
-                                            <span class="alert-button">No</span>
-                                            <span class="alert-button">Yes</span>
-                                        </span>
-                                    </div>
-
-
-                                </td>
-                            </tr>
-                            <tr class="remove-border">
-                                <td>
-
 <pre><code class="language-css">.alert  {
     background-color: #D52265;
     text-align: left;
@@ -458,9 +451,7 @@
     display: flex;
     transition: all 0.3s ease-in-out;
 }
-</code></pre>  
-                                </td>
-                                <td>
+</code></pre>
 <pre><code class="language-css">.alert-button {
     background-color: #262626;
     padding: 0 5px;
@@ -475,17 +466,32 @@
     transition: all 0.3s ease-in-out; 
 }
 </code></pre>
-                                </td>
-                                <td>
 <pre><code class="language-css">.alert-button:hover {
     background-color: #333333;
     cursor: pointer;
 }
 </code></pre> 
-                                </td>
-                            </tr>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr class="remove-border">
+                            <td>
+                                <div class="confirmation alert">
+                                    <span>This is an Alert Dialog</span>
+                                    <span>
+                                        <span class="alert-button">No</span>
+                                        <span class="alert-button">Yes</span>
+                                    </span>
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <hr class="light">
+                    <!-- SYSTEM MESSAGES & TOOLTIPS -->
+                    <table class="uk-table uk-table-responsive uk-table-divider">
                             <tr>
-                                <td colspan="3">
+                                <td colspan="2">
                                     <h2 class="uk-margin-remove-bottom">Tooltips & System Messages</h2>
                                     <ul>
                                         <li>Tooltips & System Messages should <em><strong>NOT</strong></em> have rounded edges.
@@ -496,8 +502,7 @@
                                 </td>
                             </tr>
                             <tr class="remove-border">
-                                <td>
-                                    
+                                <td>                                  
 <pre><code class="language-css">.system-message {
     background-color: #D52265;
     width: 318px;
@@ -511,16 +516,13 @@
     transition: all 0.3s ease-in-out;
 }
 </code></pre> 
-                                
-                                </td>
-                                <td>
 <pre><code class="language-css">.tooltip {
     background-color: #333333;
 padding: 5px 10p;
 margin: 20px 0 0 0;
 transition: all 0.3s ease-in-out;
 }
-</code></pre> 
+</code></pre>                                 
                                 </td>
                                 <td>
                                     <div class="system-message uk-text-center">
@@ -533,10 +535,45 @@ transition: all 0.3s ease-in-out;
                                     </div>
                                 </td>
                             </tr>
+                    </table>
+                </div>
+            </section>
 
-
-
-
+            <!-- DROPZONES -->
+            <section class="dropzones uk-margin-large-top">
+                <div class="uk-container uk-padding-small uk-margin-auto">
+                    <hr>
+                    <h1 class="uk-text-left">Dropzones</h1>
+                    <ul>
+                        <li>Dropzones should allow for drag and drop to upload as well as click and open file explorer</li>
+                        <li>Dropzones should have dashed outlines with indicating the relative size and shape of the image to be uploaded</li>
+                        <li>Dropzonee should <em><strong>NOT</strong></em> have rounded borders</li>
+                        <li>Dropzones should have tooltips describing the expected file type(s) and the recommended dimensions</li>
+                        <li>Dropzones should show a preview of the uploaded image</li>
+                        <li>Dropzones should have a Med Grey Background</li>
+                    </ul>
+                    <table class="uk-table uk-table-responsive uk-table-divider">
+                        <tr>
+                            <td>
+<pre><code class="language-css">.dropzone {
+    background-color: #262626;
+    border: 1px dashed #FFFFFF;
+}
+</code></pre>
+                            </td>
+                            <td>
+                                <div class="dropzone-container">
+                                    <div uk-tooltip="Background, PNG, Recommended Dimensions 1200px X 2400px" class="dropzone bg-dropzone">
+                                        <div uk-tooltip="Title, PNG, Recommended Dimensions 900px X 300px" class="dropzone onboarding-dropzone"></div>
+                                        <div class="status-palceholder">- STATUS -</div>
+                                        <div class="camera-palceholder">Fan Camera Feed</div>
+                                        <div uk-tooltip="Logo, PNG, Recommended Dimensions 900px X 300px" class="dropzone onboarding-dropzone"></div>
+                                        <div class="terms-palceholder"><a>Terms & Conditions</a><a>Privacy Policy</a></div>
+                                    </div>
+                                    
+                                </div>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </section>
